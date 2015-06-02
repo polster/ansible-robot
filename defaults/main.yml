@@ -1,0 +1,5 @@
+# Default varaibles, may be overridden by depending roles.
+---
+
+# List of additional robot framework libraries to be installed
+robot_package_list_pip: []

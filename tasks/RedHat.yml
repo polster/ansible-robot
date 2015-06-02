@@ -1,0 +1,19 @@
+# Installs and configures the Robot Framework on RedHad distro.
+---
+
+- name: Make sure required OS packages are installed
+  yum:
+    name: "{{ item }}"
+    state: installed
+  with_items: robot_package_list
+
+- name: Make sure robot framework is installed
+  pip:
+    name: "robotframework"
+    state: present
+
+- name: Make sure required pip packages are installed
+  pip:
+    name: "{{ item }}"
+    state: present
+  with_items: robot_package_list_pip

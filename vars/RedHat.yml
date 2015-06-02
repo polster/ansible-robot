@@ -1,0 +1,6 @@
+# Variables that shall not be overridden.
+---
+
+# Required OS specific packages
+robot_package_list:
+  - python-pip

@@ -1,0 +1,8 @@
+---
+
+- name: Include OS specific vars
+  include_vars: "RedHat.yml"
+  when: ansible_os_family == 'RedHat'
+
+- include: RedHat.yml
+  when: ansible_os_family == 'RedHat'
